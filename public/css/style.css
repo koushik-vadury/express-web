@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@0,200;0,300;0,400;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Piazzolla", serif;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-bg: #1e272e;
+  --main-color: #0097e6;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.navbar a {
+  color: white;
+  font-size: 1.8rem;
+}
+
+.main_navbar {
+  background-color: var(--main-bg);
+  padding: 1.2rem 0;
+}
+
+.main_navbar li {
+  padding: 0 1rem;
+}
+
+.fa-snowflake {
+  transition: all linear;
+  animation: rot 3s linear infinite;
+  color: var(--main-color);
+}
+
+@keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.main_header {
+  min-height: calc(100vh - 67.27px - 60px);
+}
+
+.main_header_left {
+  height: 50rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.main_header_right {
+  height: 50rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.main_header_left p {
+  font-size: 2rem;
+}
+
+.main_header p {
+  font-size: 2rem;
+}
+
+.main_header_left h1 {
+  font-size: 4rem;
+  margin: 1rem 0 4rem 0;
+  text-transform: capitalize;
+}
+
+.main_header_left span {
+  color: var(--main-color);
+}
+
+/* .main_header_left button {
+  border: none;
+  outline: none;
+  padding: 0.8rem 2rem;
+  border-radius: 2rem;
+  font-size: 1.4rem;
+  box-shadow: 0 8px 6px -5px black;
+} */
+#weather_part {
+  padding-top: 3rem;
+}
+#weather_part input {
+  font-size: 2rem;
+  border-radius: 1rem;
+  margin: 0.5rem;
+}
+
+.main_header button {
+  border: none;
+  outline: none !important;
+  padding: 0.8rem 2rem;
+  border-radius: 2rem;
+  font-size: 1.4rem;
+  box-shadow: 0 8px 6px -5px black;
+}
+
+.main_header button:hover {
+  box-shadow: 0 8px 6px -5px var(--main-color);
+}
+
+.main_header_left button:hover {
+  box-shadow: 0 8px 6px -5px var(--main-color);
+}
+
+footer {
+  text-align: center;
+  background-color: var(--main-bg);
+  padding: 1.2rem 0;
+}
+
+footer p {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.main_header_right figure img {
+  filter: drop-shadow(0 0.5rem 0.5rem rgb(46, 46, 46));
+}
+
+.tempInformation {
+  width: 40rem;
+  margin: 3rem auto;
+  min-height: 20rem;
+  background-color: var(--main-bg);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.tempInformation p {
+  color: white;
+}
+.middle_layer,
+.top_layer {
+  display: flex;
+  justify-content: space-around;
+}
+.top_layer {
+  display: flex;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid lightgray;
+}
+#city_name {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.data_hide {
+  visibility: hidden;
+  transition: all 0.3s linear;
+}
+@media (max-width: 768px) {
+  .main_header_left {
+    height: auto;
+    margin: 2rem 0;
+  }
+  .main_header_right {
+    height: auto;
+    margin: 2rem 0;
+  }
+  .tempInformation {
+    width: auto;
+  }
+}
